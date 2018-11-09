@@ -393,14 +393,14 @@ HTTP_RGB.prototype = {
             callback(new Error("There was a problem parsing the 'color' section of your configuration."));
             return;
         }
-        this.log('Caching Hue as %s ...', level);
+        //this.log('Caching Hue as %s ...', level);
         this.cache.hue = level;
-        if (this.cacheUpdated) {
-            this._setRGB(callback);
-        } else {
-            this.cacheUpdated = true;
-            callback();
-        }
+        //if (this.cacheUpdated) {
+        this._setRGB(callback);
+        //} else {
+        //    this.cacheUpdated = true;
+        //    callback();
+        //}
     },
 
     /**
@@ -449,14 +449,14 @@ HTTP_RGB.prototype = {
             callback(new Error("There was a problem parsing the 'color' section of your configuration."));
             return;
         }
-        this.log('Caching Saturation as %s ...', level);
+        //this.log('Caching Saturation as %s ...', level);
         this.cache.saturation = level;
-        if (this.cacheUpdated) {
-            this._setRGB(callback);
-        } else {
-            this.cacheUpdated = true;
-            callback();
-        }
+        //if (this.cacheUpdated) {
+        this._setRGB(callback);
+        //} else {
+        //    this.cacheUpdated = true;
+        //    callback();
+        //}
     },
 
     /**
